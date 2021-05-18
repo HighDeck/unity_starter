@@ -1,4 +1,4 @@
-file(GLOB SOURCES ./*.c ../src/solution_c_bas_niveau.c)
+file(GLOB SOURCES ./*.c test.c)
 
 add_subdirectory(unity)
 add_executable(test ${SOURCES})
