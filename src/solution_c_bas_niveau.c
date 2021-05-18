@@ -22,6 +22,10 @@ En C, les chaînes de caractères sont des tableaux de char terminées par
 le caractère nul, '\0' (code ASCII 0x00)
 */
 
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+
 /* affiche une chaine sur la console, passe la dernière valeur de retour de putchar */
 int puts(const char* cs);
 
@@ -33,7 +37,7 @@ size_t strlen(const char* cs)
 {
     size_t i = 0;
     while(cs[i++] != '\0');
-    return i-1;
+    return (size_t)i-1;
 }
 
 
